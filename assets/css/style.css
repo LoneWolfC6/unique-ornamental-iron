@@ -110,4 +110,19 @@ body {
   form button:hover {
     background-color: #333;
   }
-  
+
+  /* Make body a full-height flex container */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Allow main content to expand and push footer to bottom */
+main {
+  flex: 1;
+}
