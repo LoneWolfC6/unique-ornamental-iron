@@ -6,6 +6,9 @@
   <title>Highlights - Unique Ornamental Iron Inc.</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="description" content="Family-owned gate and fencing specialists since 1990. Unique Ornamental Iron builds custom wrought iron solutions for homes and businesses across Southern California.">
+  <meta name="keywords" content="custom gates, wrought iron fencing, metalwork, driveway gates, iron fencing, SoCal fencing, family owned, Unique Ornamental Iron">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -24,12 +27,28 @@
   <main>
     <section class="highlights">
       <h2>Project Gallery</h2>
-      <p>Browse some of our completed projects below.</p>
-      <div class="gallery">
-        <img src="assets/images/sample1.jpg" alt="Iron gate project">
-        <img src="assets/images/sample2.jpg" alt="Custom railing">
-        <img src="assets/images/sample3.jpg" alt="Decorative wall design">
-      </div>
+      <p>From driveway gates to backyard fencing, here's a look at just a few of the custom projects we've brought to life for our clients across Southern California.</p>
+      <div class="gallery" id = "gallery"></div>
+      <script>
+        const gallery = document.getElementById('gallery');
+        const imageList = [
+          "sample1.jpg",
+          "sample2.jpg",
+          "sample3.jpg",
+          "sample4.jpg",
+          "sample5.jpg",
+          "sample6.jpg",
+          "sample7.jpg",
+          "sample8.jpg",
+        ];
+
+        imageList.forEach(file => {
+          const img = document.createElement('img');
+          img.src = `assets/images/${file}`;
+          img.alt = "Project photo";
+          gallery.appendChild(img);
+        })
+      </script>
     </section>
   </main>
 
