@@ -1,9 +1,15 @@
+.hero-video-wrapper,
+.hero {
+  background-color: black;
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: black;
+    color: white;
   }
   
   header {
@@ -35,11 +41,6 @@ body {
   
   nav a:hover {
     text-decoration: underline;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 50px 20px;
   }
   
   .cta-button {
@@ -138,8 +139,9 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
+
   width: auto;
-  height: 100%;
+  height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
   filter: blur(2px) brightness(60%);
