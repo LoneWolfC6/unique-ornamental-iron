@@ -41,7 +41,6 @@
       <p>From driveway gates to backyard fencing, here's a look at just a few of the custom projects we've brought to life for our clients across Southern California.</p>
       <div class="gallery" id = "gallery"></div>
       <script>
-        const gallery = document.getElementById('gallery');
         const imageList = [
           { file: "sample1.jpg", alt: "Custom iron driveway gate in Homeland CA" },
           { file: "sample2.jpg", alt: "Decorative wrought iron fence project in Southern California" },
@@ -55,8 +54,8 @@
 
         imageList.forEach(file => {
           const img = document.createElement('img');
-          img.src = `assets/images/${file}`;
-          img.alt = item.alt;
+          img.src = `assets/images/${file.file}`;
+          img.alt = file.alt;
           gallery.appendChild(img);
         })
       </script>
