@@ -43,20 +43,20 @@
       <script>
         const gallery = document.getElementById('gallery');
         const imageList = [
-          "sample1.jpg",
-          "sample2.jpg",
-          "sample3.jpg",
-          "sample4.jpg",
-          "sample5.jpg",
-          "sample6.jpg",
-          "sample7.jpg",
-          "sample8.jpg",
+          { file: "sample1.jpg", alt: "Custom iron driveway gate in Homeland CA" },
+          { file: "sample2.jpg", alt: "Decorative wrought iron fence project in Southern California" },
+          { file: "sample3.jpg", alt: "Ornamental metal railing installation" },
+          { file: "sample4.jpg", alt: "Simple wrought iron fence project in Southern California" },
+          { file: "sample5.jpg", alt: "Awning custom project in Southern California" },
+          { file: "sample6.jpg", alt: "Simple side gate custom installation" },
+          { file: "sample7.jpg", alt: "Decorative security screen in Southern California" },
+          { file: "sample8.jpg", alt: "Patio railing fencing installation in Southern California" }
         ];
 
         imageList.forEach(file => {
           const img = document.createElement('img');
           img.src = `assets/images/${file}`;
-          img.alt = "Project photo";
+          img.alt = item.alt;
           gallery.appendChild(img);
         })
       </script>
