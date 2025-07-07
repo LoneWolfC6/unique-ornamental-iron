@@ -191,6 +191,16 @@ footer {
   text-align: center;
 }
 
+.highlights h2 {
+  margin-bottom: 10px;
+}
+
+.highlights p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+
 
 /* ========== CONTACT FORM ========== */
 form {
@@ -244,6 +254,21 @@ form button:hover {
   margin: 20px auto 0;
   font-size: 1rem;
 }
+
+.about h2,
+.about p {
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 10px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
 
 /* ========== BUSINESS HOURS ========== */
 .hours {
