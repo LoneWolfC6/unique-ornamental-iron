@@ -68,14 +68,24 @@
           link.href = `assets/images/${file.file}`;
           link.className = 'glightbox';
           link.setAttribute('data-gallery', 'iron-gallery');
+          link.setAttribute('data-title', file.alt);
 
           const img = document.createElement('img');
           img.src = `assets/images/${file.file}`;
           img.alt = file.alt;
           img.loading = "lazy";
 
+          const caption = document.createElement('p');
+          caption.className = 'caption';
+          caption.textContent = file.alt;
+
           link.appendChild(img);
-          gallery.appendChild(link);
+          const wrapper = document.createElement('div');
+          wrapper.appendChild(link);
+          wrapper.appendChild(caption);
+          
+          gallery.appendChild(wrapper);
+          
         });
 
 // Initialize AFTER images are added
