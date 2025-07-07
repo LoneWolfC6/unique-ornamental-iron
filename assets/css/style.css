@@ -201,3 +201,24 @@ main {
   padding: 0;
   box-sizing: border-box;
 }
+.gslide-description {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: white !important;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.gslide-description .gdesc-inner {
+  padding: 12px 20px !important;
+}
+
+.gslide-description .gslide-title {
+  display: block !important;
+  color: white !important;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  font-size: 1rem;
+  text-align: center;
+}
+
+
