@@ -115,6 +115,21 @@ nav a:hover {
   border-radius: 4px;
 }
 
+.cta-quote {
+  text-align: center;
+  margin: 40px 0 0;
+}
+
+.cta-quote p {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.cta-quote.top {
+  margin: 20px 0;
+}
+
+
 /* ========== MAIN LAYOUT ========== */
 main {
   flex: 1;
@@ -170,6 +185,12 @@ footer {
   max-width: 90%;
   margin: 8px auto 0;
 }
+
+.highlights h2,
+.highlights p {
+  text-align: center;
+}
+
 
 /* ========== CONTACT FORM ========== */
 form {
