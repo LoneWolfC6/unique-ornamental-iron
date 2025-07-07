@@ -75,11 +75,31 @@
   </footer>
 
   <script> 
-  const todayIndex = new Date().getDay();
-  const hoursList = document.querySelectorAll('.hours li');
-  if (hoursList[todayIndex === 0 ? 6 : todayIndex - 1]) {
-    hoursList[todayIndex === 0 ? 6 : todayIndex - 1].classList.add('today');
+  const now = new Date();
+const currentDay = now.getDay(); // 0 = Sunday
+const currentHour = now.getHours(); // 24-hour format
+const hoursList = document.querySelectorAll('.hours li');
+const todayLi = hoursList[currentDay === 0 ? 6 : currentDay - 1];
+
+if (todayLi) {
+  const openHour = 8;
+  const closeHour = 17;
+  const isWeekend = currentDay === 0 || currentDay === 6;
+
+  let isOpen = false;
+
+  if (!isWeekend) {
+    isOpen = currentHour >= openHour && currentHour < closeHour;
   }
+
+  todayLi.classList.add("today");
+  todayLi.classList.add(isOpen ? "open" : "closed");
+
+  const statusSpan = document.createElement("span");
+  statusSpan.classList.add("status");
+  statusSpan.textContent = isOpen ? "(Open Now)" : "(Closed)";
+  todayLi.appendChild(statusSpan);
+}
   </script>
 </body>
 </html>
