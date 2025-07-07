@@ -54,11 +54,32 @@
         <button type="submit">Send</button>
       </form>
     </section>
+
+    <section class = "hours">
+      <h2>Business Hours</h2>
+      <ul>
+        <li><strong>Monday:</strong> 8:00 AM - 5:00 PM</li>
+        <li><strong>Tuesday:</strong> 8:00 AM - 5:00 PM</li>
+        <li><strong>Wednesday:</strong> 8:00 AM - 5:00 PM</li>
+        <li><strong>Thursday:</strong> 8:00 AM - 5:00 PM</li>
+        <li><strong>Friday:</strong> 8:00 AM - 5:00 PM</li>
+        <li><strong>Saturday:</strong> Closed</li>
+        <li><strong>Sunday:</strong> Closed</li>
+      </ul>
+    </section>
+
   </main>
 
   <footer>
     <p>&copy; 2025 Unique Ornamental Iron Inc. All rights reserved.</p>
   </footer>
 
+  <script> 
+  const todayIndex = new Date().getDay();
+  const hoursList = document.querySelectorAll('.hours li');
+  if (hoursList[todayIndex === 0 ? 6 : todayIndex - 1]) {
+    hoursList[todayIndex === 0 ? 6 : todayIndex - 1].classList.add('today');
+  }
+  </script>
 </body>
 </html>
