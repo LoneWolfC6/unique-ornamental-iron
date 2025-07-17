@@ -14,13 +14,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
-  background-color: black;
-  color: white;
+  background-color: #f4f4f4;
+  color: black;
 }
 
 /* ========== HEADER & NAV ========== */
 header {
-  background-color: #222;
+  background-color: #777;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -51,16 +51,45 @@ nav a:hover {
 }
 
 /* ========== HERO SECTION ========== */
-.hero-video-wrapper,
-.hero {
-  background-color: black;
+.hero,
+.hero-video-wrapper {
+  background-color: #f4f4f4;
+}
+
+.hero-side-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.hero-side {
+  width: 20%;
+  text-align: center;
+  color: #333;
+}
+
+.hero-side img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.hero-side p {
+  font-size: 0.95rem;
+  padding: 0 10px;
 }
 
 .hero-video-wrapper {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 60%;
+  height: 80vh;
   overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero-video-wrapper video {
@@ -81,7 +110,7 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
@@ -104,7 +133,22 @@ nav a:hover {
   margin: auto;
 }
 
-/* ========== CTA BUTTON ========== */
+@media (max-width: 768px) {
+  .hero-side-container {
+    flex-direction: column;
+  }
+
+  .hero-side,
+  .hero-video-wrapper {
+    width: 100%;
+  }
+
+  .hero-video-wrapper {
+    height: 50vh;
+  }
+}
+
+/* ========== CTA BUTTONS ========== */
 .cta-button {
   display: inline-block;
   margin-top: 20px;
@@ -129,7 +173,6 @@ nav a:hover {
   margin: 20px 0;
 }
 
-
 /* ========== MAIN LAYOUT ========== */
 main {
   flex: 1;
@@ -148,7 +191,7 @@ h3 {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #222;
+  background-color: #777;
   color: white;
   margin-top: 50px;
 }
@@ -176,12 +219,12 @@ footer {
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .gallery img:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .gallery .caption {
@@ -190,7 +233,6 @@ footer {
   color: white;
   text-align: center;
   word-wrap: break-word;
-  overflow-wrap: break-word;
   max-width: 90%;
   margin: 8px auto 0;
 }
@@ -209,19 +251,28 @@ footer {
   margin: 0 auto 30px;
 }
 
-
-
 /* ========== CONTACT FORM ========== */
-form {
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact h2 {
+  margin-bottom: 15px;
+}
+
+.contact form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding: 20px;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -239,31 +290,18 @@ form button:hover {
   background-color: #333;
 }
 
-.contact {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.contact form {
-  margin-top: 30px;
-}
-
-.contact h2 {
-  margin-bottom: 15px;
-}
-
 /* ========== SERVICE AREA ========== */
 .service-area {
   text-align: center;
   padding: 50px 20px;
-  color: white;
+  color: black;
 }
 
 .service-area img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .service-area h2 {
@@ -291,44 +329,68 @@ form button:hover {
   margin: 0 auto 30px;
 }
 
-
-/* ========== BUSINESS HOURS ========== */
+/* ========== BUSINESS HOURS (Modern Box) ========== */
 .hours {
   text-align: center;
   padding: 50px 20px;
 }
 
-.hours h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+.hours-box {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+  text-align: left;
 }
 
-.hours ul {
+.hours-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+  color: #222;
+}
+
+.hours-box ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.hours-box li {
   font-size: 1rem;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: box-shadow 0.3s ease;
 }
 
-.hours li {
-  margin-bottom: 10px;
+.hours-box li:last-child {
+  margin-bottom: 0;
 }
 
-.hours li.today {
+.hours-box li.today {
   font-weight: bold;
 }
 
-.hours li.today.open {
-  color: #ffcc00;
+.hours-box li.today.open {
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.6); /* gold glow */
 }
 
-.hours li.today.closed {
-  color: #ff5555;
+.hours-box li.today.closed {
+  box-shadow: 0 0 12px rgba(231, 76, 60, 0.5); /* red glow */
 }
 
-.hours li .status {
-  font-weight: normal;
-  margin-left: 10px;
+.hours-box li .status {
   font-size: 0.9em;
+  margin-left: 10px;
+  font-weight: normal;
+  color: #777;
 }
 
 /* ========== LIGHTBOX (Glightbox) ========== */
@@ -347,8 +409,7 @@ form button:hover {
 .gslide-description .gslide-title {
   display: block !important;
   color: white !important;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   font-size: 1rem;
   text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-

@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta & Title -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Gallery | Custom Iron Gates & Fencing in Homeland CA</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <!-- Styles & Fonts -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap" rel="stylesheet">
-  <meta name="description" content="Browse our gallery of custom iron gates, fences, and ornamental metal projects handcrafted by Unique Ornamental Iron in Homeland CA.">
-  <meta name="keywords" content="custom gates, wrought iron fencing, metalwork, driveway gates, iron fencing, SoCal fencing, family owned, Unique Ornamental Iron">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css?v=2" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <script type = "application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Unique Ornamental Iron Inc.",
-            "image": "https://lonewolfc6.github.io/unique-ornamental-iron/assets/images/sample1.jpg"
-            "@id": "",
-            "url": "https://lonewolfc6.github.io/unique-ornamental-iron/"
-            "telephone": "(760) 981-2026",
-            "address": {
-                "@type" : "PostalAddress",
-                "streetAddress": "Homeland CA",
-                "addressLocality": "Homeland",
-                "postalCode": "",
-                "addressCountry": "US"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 33.742,
-                "longitude": -117.113
-            },
-            "sameAs": [
-            "https://www.yelp.com/biz/unique-ornamental-iron-homeland",
-            "https://www.facebook.com/profile.php?id=100063850229702"
-            ],
-            "description": "Unique Ornamental Iron Inc. builds custom iron gates, fencing, railings, and more throughout Homeland CA and Southern California since 1990."
-        }
-    </script>
+  <!-- SEO Meta -->
+  <meta name="description" content="Browse our gallery of custom iron gates, fences, and ornamental metal projects handcrafted by Unique Ornamental Iron in Homeland CA." />
+  <meta name="keywords" content="custom gates, wrought iron fencing, metalwork, driveway gates, iron fencing, SoCal fencing, family owned, Unique Ornamental Iron" />
 
-</head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Unique Ornamental Iron Inc.",
+      "image": "https://lonewolfc6.github.io/unique-ornamental-iron/assets/images/sample1.jpg",
+      "@id": "",
+      "url": "https://lonewolfc6.github.io/unique-ornamental-iron/",
+      "telephone": "(760) 981-2026",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Homeland CA",
+        "addressLocality": "Homeland",
+        "postalCode": "",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.742,
+        "longitude": -117.113
+      },
+      "sameAs": [
+        "https://www.yelp.com/biz/unique-ornamental-iron-homeland",
+        "https://www.facebook.com/profile.php?id=100063850229702"
+      ],
+      "description": "Unique Ornamental Iron Inc. builds custom iron gates, fencing, railings, and more throughout Homeland CA and Southern California since 1990."
+    }
+  </script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVXNBNRGT7"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-QVXNBNRGT7');
+  </script>
 
-  gtag('config', 'G-QVXNBNRGT7');
-</script>
-<body class = "default">
+  <!-- Glightbox Library -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+</head>
 
+<body class="default">
+  <!-- Header -->
   <header>
     <h1>Unique Ornamental Iron Inc.</h1>
     <h2>Gallery of Custom Iron Gates, Fencing & Metalwork Projects</h2>
@@ -61,15 +70,15 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="highlights.html">Highlights</a></li>
+        <li><a href="highlights.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <!-- Project Gallery -->
     <section class="highlights">
-      <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
       <h2>Project Gallery</h2>
       <p>From driveway gates to backyard fencing, here's a look at just a few of the custom projects we've brought to life for our clients across Southern California.</p>
 
@@ -77,71 +86,24 @@
         <a href="contact.html" class="cta-button">Get a Quote!</a>
       </div>
 
-      <div class="gallery" id = "gallery"></div>
-      <script>
-        const imageList = [
-          { file: "sample1.jpg", alt: "Custom iron driveway gate in Homeland CA" },
-          { file: "sample2.jpg", alt: "Decorative wrought iron fence project in Southern California" },
-          { file: "sample3.jpg", alt: "Ornamental metal railing installation" },
-          { file: "sample4.jpg", alt: "Simple wrought iron fence project in Southern California" },
-          { file: "sample5.jpg", alt: "Awning custom project in Southern California" },
-          { file: "sample6.jpg", alt: "Simple side gate custom installation" },
-          { file: "sample7.jpg", alt: "Decorative security screen in Southern California" },
-          { file: "sample8.jpg", alt: "Patio railing fencing installation in Southern California" },
-          { file: "sample9.jpg", alt: "Personalized gate design" },
-          { file: "sample10.jpg", alt: "Wrought iron security gate" },
-          { file: "sample11.jpg", alt: "Simple side gate project" },
-          { file: "sample12.jpg", alt: "Custom built pool fencing" },
-          { file: "sample13.jpg", alt: "Durable wrought iron perimeter fencing" },
-          { file: "sample14.jpg", alt: "Stunning safety balcony railing" },
-          { file: "sample15.jpg", alt: "Unique iron entryway" }
-        ];
+      <div class="gallery" id="gallery"></div>
 
-        const gallery = document.getElementById('gallery');
-
-        imageList.forEach(file => {
-          const link = document.createElement('a');
-          link.href = `assets/images/${file.file}`;
-          link.className = 'glightbox';
-          link.setAttribute('data-gallery', 'iron-gallery');
-          link.setAttribute('data-title', file.alt);
-
-          const img = document.createElement('img');
-          img.src = `assets/images/${file.file}`;
-          img.alt = file.alt;
-          img.loading = "lazy";
-
-          const caption = document.createElement('p');
-          caption.className = 'caption';
-          caption.textContent = file.alt;
-
-          link.appendChild(img);
-          const wrapper = document.createElement('div');
-          wrapper.appendChild(link);
-          wrapper.appendChild(caption);
-          
-          gallery.appendChild(wrapper);
-          
-        });
-
-// Initialize AFTER images are added
-        const lightbox = GLightbox({
-          selector: '.glightbox'
-        });
-      </script>
       <div class="cta-quote">
-  <p>Like what you see?</p>
-  <a href="contact.html" class="cta-button">Get a Quote!</a>
-</div>
-
+        <p>Like what you see?</p>
+        <a href="contact.html" class="cta-button">Get a Quote!</a>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-        <p>&copy; 2025 Unique Ornamental Iron Inc. All rights reserved.<br>
-        Licensed, Bonded & Insured — CA LIC#709394</p>
-    </footer>
+    <p>
+      &copy; 2025 Unique Ornamental Iron Inc. All rights reserved.<br />
+      Licensed, Bonded & Insured — CA LIC#709394
+    </p>
+  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>
